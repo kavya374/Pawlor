@@ -21,6 +21,7 @@ function renderCart() {
       <a href="shop.html" class="btn-continue">Continue Shopping</a>
     </div>
   `;
+  cartTotal.textContent = "0.00";
   return;
 }
   let total = 0;
