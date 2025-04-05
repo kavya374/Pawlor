@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Paw Soak | Pawlor Pet Spa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Pawlor<span class="paw-icon">🐾</span></h1>
+            </div>
+            
+            <nav>
+              <ul class="nav-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="cart.html" class="active">Cart</a></li>
+              </ul>
+          </nav>
+          <div class="header-buttons">
+            <button class="search-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Product Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html?category=grooming">Grooming</a></li>
+                    <li>Lavender Paw Soak</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Product Detail -->
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-layout">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="images/lavender-paw-soak.png" alt="Lavender Paw Soak" id="main-product-image">
+                        </div>
+                        <div class="thumbnail-images">
+                            <div class="thumbnail active" data-image="images/lavender-paw-soak.png">
+                                <img src="images/lavender-paw-soak.png" alt="Lavender Paw Soak - Main">
+                            </div>
+                            <div class="thumbnail" data-image="images/lavender-paw-soak-2.png">
+                                <img src="images/lavender-paw-soak-2.png" alt="Lavender Paw Soak - In Use">
+                            </div>
+                            <div class="thumbnail" data-image="images/lavender-paw-soak-3.png">
+                                <img src="images/lavender-paw-soak-3.png" alt="Lavender Paw Soak - Ingredients">
+                            </div>
+                            <div class="thumbnail" data-image="images/lavender-paw-soak-4.png">
+                                <img src="images/lavender-paw-soak-4.png" alt="Lavender Paw Soak - Package">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <div class="product-badge">Best Seller</div>
+                        <h1>Lavender Paw Soak</h1>
+                        <p class="product-subtitle">Calm + Clean</p>
+                        
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(124 reviews)</span>
+                            <a href="#product-reviews" class="read-reviews">Read Reviews</a>
+                        </div>
+                        
+                        <p class="product-price">$14.99</p>
+                        
+                        <div class="product-description">
+                            <p>Our gentle Lavender Paw Soak is specially formulated to clean and soothe your dog's paws after walks. The calming lavender scent helps reduce anxiety during grooming, while natural ingredients clean and moisturize paw pads.</p>
+                            <ul>
+                                <li>Soothes dry, cracked paws</li>
+                                <li>Removes dirt and allergens</li>
+                                <li>Calming lavender essential oil</li>
+                                <li>100% natural ingredients</li>
+                                <li>Vet-approved formula</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-size">
+                            <h3>Size</h3>
+                            <div class="size-options">
+                                <div class="size-option active">
+                                    <input type="radio" name="size" id="size-8oz" checked>
+                                    <label for="size-8oz">8 oz</label>
+                                </div>
+                                <div class="size-option">
+                                    <input type="radio" name="size" id="size-16oz">
+                                    <label for="size-16oz">16 oz <span class="size-price">$24.99</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-quantity">
+                            <h3>Quantity</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="99" id="product-quantity">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn primary-btn add-to-cart-btn" data-product-id="lavender-paw-soak" data-product-name="Lavender Paw Soak" data-product-price="14.99" data-product-image="images/lavender-paw-soak.png">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Satisfaction Guarantee</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Free Shipping on Orders $35+</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-paw"></i>
+                                <span>Cruelty-Free & Eco-Friendly</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-share">
+                            <span>Share:</span>
+                            <div class="share-icons">
+                                <a href="#" class="share-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="share-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Tabs -->
+        <section class="product-tabs">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+                    <button class="tab-btn" data-tab="how-to-use">How to Use</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (124)</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>About Lavender Paw Soak</h3>
+                        <p>Our Lavender Paw Soak is a gentle, effective solution for cleaning and soothing your dog's paws after walks or outdoor activities. Formulated with natural ingredients and essential oils, this soak helps remove dirt, allergens, and irritants while moisturizing dry, cracked paw pads.</p>
+                        
+                        <p>The calming lavender scent helps reduce anxiety during grooming sessions, making it easier to care for your pet's paws. Regular use can help maintain healthy paws and prevent issues caused by environmental irritants.</p>
+                        
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Cleans and removes dirt, salt, and allergens from paws</li>
+                            <li>Soothes and moisturizes dry, cracked paw pads</li>
+                            <li>Calming lavender scent reduces anxiety during grooming</li>
+                            <li>Helps prevent irritation from environmental factors</li>
+                            <li>Made with 100% natural, pet-safe ingredients</li>
+                            <li>Vet-approved formula</li>
+                            <li>No harsh chemicals, parabens, or artificial fragrances</li>
+                        </ul>
+                        
+                        <h4>Sizes Available:</h4>
+                        <ul>
+                            <li>8 oz bottle - Perfect for small to medium dogs</li>
+                            <li>16 oz bottle - Ideal for large dogs or multi-dog households</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="ingredients">
+                        <h3>Ingredients</h3>
+                        <p>We believe in transparency and using only the highest quality, natural ingredients that are safe for your pet.</p>
+                        
+                        <div class="ingredients-list">
+                            <div class="ingredient">
+                                <h4>Purified Water</h4>
+                                <p>Base ingredient that helps dissolve and carry other ingredients.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Aloe Vera Juice</h4>
+                                <p>Soothes and moisturizes dry skin and paw pads.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Vegetable Glycerin</h4>
+                                <p>Natural humectant that helps retain moisture in the skin.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Lavender Essential Oil</h4>
+                                <p>Provides a calming scent and has natural antibacterial properties.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Chamomile Extract</h4>
+                                <p>Soothes irritated skin and has anti-inflammatory properties.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Witch Hazel</h4>
+                                <p>Natural astringent that helps clean and reduce inflammation.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Vitamin E</h4>
+                                <p>Antioxidant that helps protect and repair skin cells.</p>
+                            </div>
+                            <div class="ingredient">
+                                <h4>Coconut-Derived Cleanser</h4>
+                                <p>Gentle, natural surfactant that helps remove dirt and debris.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ingredient-badges">
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No Parabens</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No Sulfates</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No Artificial Fragrances</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No Harsh Chemicals</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cruelty-Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="how-to-use">
+                        <h3>How to Use</h3>
+                        <div class="usage-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Prepare</h4>
+                                    <p>Fill a shallow container with warm water and add 1-2 tablespoons of Lavender Paw Soak.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Soak</h4>
+                                    <p>Gently place your dog's paw in the solution and let it soak for 1-2 minutes. Repeat with each paw.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Clean</h4>
+                                    <p>Use your fingers or a soft cloth to gently clean between paw pads and around nails.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Rinse</h4>
+                                    <p>Rinse paws with clean water to remove any remaining solution.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h4>Dry</h4>
+                                    <p>Pat dry with a clean towel. Follow with Pawlor Paw Balm for extra protection if needed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="usage-tips">
+                            <h4>Pro Tips:</h4>
+                            <ul>
+                                <li>Use after walks, especially in urban areas or during allergy season</li>
+                                <li>For best results, use 2-3 times per week</li>
+                                <li>Can be used as a preventative measure before walks in snowy or icy conditions</li>
+                                <li>Store at room temperature away from direct sunlight</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews" data-product-id="lavender-paw-soak">
+                        <div class="reviews-summary">
+                            <div class="rating-summary">
+                                <div class="average-rating">
+                                    <span class="rating-number">4.8</span>
+                                    <div class="rating-stars">
+                                        <span class="stars">★★★★★</span>
+                                        <span class="rating-text">Based on 124 reviews</span>
+                                    </div>
+                                </div>
+                                <div class="rating-breakdown">
+                                    <div class="rating-row">
+                                        <span class="rating-label">5 Stars</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-fill" style="width: 85%;"></div>
+                                        </div>
+                                        <span class="rating-count">105</span>
+                                    </div>
+                                    <div class="rating-row">
+                                        <span class="rating-label">4 Stars</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-fill" style="width: 10%;"></div>
+                                        </div>
+                                        <span class="rating-count">12</span>
+                                    </div>
+                                    <div class="rating-row">
+                                        <span class="rating-label">3 Stars</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-fill" style="width: 4%;"></div>
+                                        </div>
+                                        <span class="rating-count">5</span>
+                                    </div>
+                                    <div class="rating-row">
+                                        <span class="rating-label">2 Stars</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-fill" style="width: 1%;"></div>
+                                        </div>
+                                        <span class="rating-count">1</span>
+                                    </div>
+                                    <div class="rating-row">
+                                        <span class="rating-label">1 Star</span>
+                                        <div class="rating-bar">
+                                            <div class="rating-fill" style="width: 1%;"></div>
+                                        </div>
+                                        <span class="rating-count">1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-cta">
+                                <button class="btn primary-btn" id="write-review-btn">Write a Review</button>
+                            </div>
+                        </div>
+                        
+                        <div class="review-filters">
+                            <div class="filter-group">
+                                <label for="review-sort">Sort by:</label>
+                                <select id="review-sort">
+                                    <option value="newest">Newest</option>
+                                    <option value="highest">Highest Rating</option>
+                                    <option value="lowest">Lowest Rating</option>
+                                    <option value="helpful">Most Helpful</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Filter by:</label>
+                                <div class="filter-options">
+                                    <button class="filter-btn active" data-filter="all">All</button>
+                                    <button class="filter-btn" data-filter="5">5 Star</button>
+                                    <button class="filter-btn" data-filter="4">4 Star</button>
+                                    <button class="filter-btn" data-filter="3">3 Star</button>
+                                    <button class="filter-btn" data-filter="images">With Images</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="images/reviewer-1.png" alt="Sarah M.">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Sarah M.</h4>
+                                            <p class="review-date">Verified Purchase - March 15, 2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">★★★★★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Game changer for my anxious pup!</h3>
+                                <div class="review-content">
+                                    <p>My Shih Tzu has always hated having his paws touched, making post-walk cleaning a nightmare. The lavender scent in this soak actually calms him down enough that I can clean his paws without a struggle. The formula is gentle but effective at removing dirt and allergens. His paws are noticeably softer after just a few uses!</p>
+                                </div>
+                                <div class="review-images">
+                                    <img src="images/review-image-1.png" alt="Review image">
+                                    <img src="images/review-image-2.png" alt="Review image">
+                                </div>
+                                <div class="review-footer">
+                                    <div class="review-helpful">
+                                        <span>Was this review helpful?</span>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Yes (24)</button>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-down"></i> No (2)</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="images/reviewer-2.png" alt="Michael T.">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Michael T.</h4>
+                                            <p class="review-date">Verified Purchase - February 28, 2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">★★★★★</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Professional groomer approved!</h3>
+                                <div class="review-content">
+                                    <p>As a professional groomer, I've tried countless paw cleaning products, and this is by far the best. The natural ingredients are gentle enough for sensitive skin but effective at removing dirt and allergens. The lavender scent is pleasant without being overwhelming. I now recommend this to all my clients, especially those with dogs who have sensitive paws or allergies.</p>
+                                </div>
+                                <div class="review-footer">
+                                    <div class="review-helpful">
+                                        <span>Was this review helpful?</span>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Yes (18)</button>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-down"></i> No (0)</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <img src="images/reviewer-3.png" alt="Jessica L.">
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Jessica L.</h4>
+                                            <p class="review-date">Verified Purchase - March 5, 2025</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <span class="stars">★★★★☆</span>
+                                    </div>
+                                </div>
+                                <h3 class="review-title">Great product, wish it came with a soaking container</h3>
+                                <div class="review-content">
+                                    <p>The paw soak itself is excellent - it cleans well and my Golden Retriever doesn't mind the process at all. The lavender scent is calming and not too strong. My only suggestion would be to include a small soaking container or tray with the product. I ended up buying one separately. Otherwise, it's a fantastic product that I'll continue to use!</p>
+                                </div>
+                                <div class="review-images">
+                                    <img src="images/review-image-3.png" alt="Review image">
+                                </div>
+                                <div class="review-footer">
+                                    <div class="review-helpful">
+                                        <span>Was this review helpful?</span>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Yes (12)</button>
+                                        <button class="helpful-btn"><i class="far fa-thumbs-down"></i> No (1)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">...</button>
+                            <button class="pagination-btn">12</button>
+                            <button class="pagination-btn next">Next <i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <!-- Review Form (Initially Hidden) -->
+                        <div id="review-form" class="review-form" style="display: none;">
+                            <h3>Write a Review</h3>
+                            <form id="product-review-form">
+                                <div class="form-group">
+                                    <label>Your Rating*</label>
+                                    <div class="rating-input">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-title">Review Title*</label>
+                                    <input type="text" id="review-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-content">Review*</label>
+                                    <textarea id="review-content" rows="5" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Add Photos (optional)</label>
+                                    <div class="photo-upload">
+                                        <input type="file" id="review-photos" multiple accept="image/*">
+                                        <label for="review-photos" class="upload-btn"><i class="fas fa-camera"></i> Upload Photos</label>
+                                        <div class="upload-preview"></div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn secondary-btn" id="cancel-review">Cancel</button>
+                                    <button type="submit" class="btn primary-btn">Submit Review</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>You May Also Like</h2>
+                    <p>Complete your pet's grooming routine</p>
+                </div>
+                <div class="products-slider">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/paw-balm.png" alt="Paw Balm">
+                        </div>
+                        <div class="product-details">
+                            <p class="product-category">Grooming</p>
+                            <h3>Paw Balm</h3>
+                            <p class="product-subtitle">Protect + Moisturize</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(98)</span>
+                            </div>
+                            <p class="product-price">$12.99</p>
+                            <button class="btn add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/oatmeal-shampoo.png" alt="Oatmeal Shampoo">
+                        </div>
+                        <div class="product-details">
+                            <p class="product-category">Grooming</p>
+                            <h3>Oatmeal Shampoo</h3>
+                            <p class="product-subtitle">Soothe + Hydrate</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(89)</span>
+                            </div>
+                            <p class="product-price">$16.99</p>
+                            <button class="btn add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="images/detangling-spray.png" alt="Detangling Spray">
+                        </div>
+                        <div class="product-details">
+                            <p class="product-category">Grooming</p>
+                            <h3>Detangling Spray</h3>
+                            <p class="product-subtitle">Smooth + Shine</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="count">(76)</span>
+                            </div>
+                            <p class="product-price">$16.99</p>
+                            <button class="btn add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/ear-wipes.png" alt="Ear Cleansing Wipes">
+                        </div>
+                        <div class="product-details">
+                            <p class="product-category">Grooming</p>
+                            <h3>Ear Cleansing Wipes</h3>
+                            <p class="product-subtitle">Gentle + Effective</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="count">(103)</span>
+                            </div>
+                            <p class="product-price">$12.99</p>
+                            <button class="btn add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Pawlor<span class="paw-icon">🐾</span></h2>
+                    </div>
+                    <p>Wellness, One Woof at a Time</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="shop.html?category=grooming">Grooming</a></li>
+                        <li><a href="shop.html?category=supplements">Supplements</a></li>
+                        <li><a href="shop.html?category=treats">Treats</a></li>
+                        <li><a href="shop.html?category=accessories">Accessories</a></li>
+                        <li><a href="subscription.html">Spa Box Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="ingredients.html">Ingredients</a></li>
+                        <li><a href="blog.html">Wellness Hub</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="account.html">My Account</a></li>
+                        <li><a href="track.html">Track Order</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawlor. All rights reserved.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

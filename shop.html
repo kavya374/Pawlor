@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Pawlor Pet Spa & Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>pawlor<span class="paw-icon">🐾</span></h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="search-btn" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <div id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Hero -->
+    <section id="shop-hero" >
+        <div class="container">
+            <div class="section-heading">
+                <h2>Shop All Products</h2>
+                <p>Browse our selection of premium pet spa and wellness products</p>
+            </div>
+        </div>
+    </section>
+<section id="shop-content">
+  <div class="container">
+    <div class="shop-filters">
+      <div class="filter-row">
+        <div class="filter-group">
+          <button class="filter-button active">All</button>
+          <button class="filter-button">Grooming</button>
+          <button class="filter-button">Supplements</button>
+          <button class="filter-button">Treats</button>
+          <button class="filter-button">Accessories</button>
+        </div>
+        
+        <div class="sort-group">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select" class="sort-select">
+            <option value="popular">Most Popular</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="products-grid" id="products-grid">
+
+    </div> 
+
+  </div> 
+</section>
+<script src="shop.js"> </script>
+</body>
+</html>

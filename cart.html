@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <h1>pawlor<span class="paw-icon">🐾</span></h1>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" >Shop</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="search-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <div id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+  <div class="cart-container">
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-summary">
+      <h3>Total: $<span id="cart-total">0.00</span></h3>
+    </div>
+  </div>
+<script>
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+  const cartCount = document.querySelector(".cart-count");
+
+  let cartItems = JSON.parse(localStorage.getItem("pawlorCartItems")) || [];
+
+  function updateCartCount() {
+    if (cartCount) {
+      const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+      cartCount.textContent = totalCount;
+    }
+  }
+
+  function renderCart() {
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    cartItems.forEach((item, index) => {
+      total += item.price * item.quantity;
+
+      const cartItemEl = document.createElement("div");
+      cartItemEl.className = "cart-item";
+      cartItemEl.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" width="80">
+        <div class="item-col">
+          <div>
+            <h4>${item.name}</h4>
+            <p>$${item.price.toFixed(2)}</p>
+            <p>Quantity: ${item.quantity}</p>
+          </div>
+          <div>
+            <button class="remove-btn" data-index="${index}">Remove</button>
+          </div>
+        </div>
+      `;
+      cartItemsContainer.appendChild(cartItemEl);
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+
+    document.querySelectorAll(".remove-btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+        const index = this.getAttribute("data-index");
+        cartItems.splice(index, 1);
+        localStorage.setItem("pawlorCartItems", JSON.stringify(cartItems));
+        renderCart();
+        updateCartCount();
+      });
+    });
+  }
+
+  renderCart();
+  updateCartCount();
+</script>
+
+</body>
+</html>
