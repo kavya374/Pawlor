@@ -14,6 +14,7 @@ function updateCartCount() {
 function renderCart() {
   cartItemsContainer.innerHTML = '';
   if (cartItems.length === 0) {
+    cartTotal.textContent = "0.00";
   cartItemsContainer.innerHTML = `
     <div class="empty-cart">
       <h3>Oops! Your cart is empty 🛒</h3>
@@ -21,7 +22,7 @@ function renderCart() {
       <a href="shop.html" class="btn-continue">Continue Shopping</a>
     </div>
   `;
-  cartTotal.textContent = "0.00";
+ 
   return;
 }
   let total = 0;
@@ -51,6 +52,7 @@ function renderCart() {
 
   document.querySelectorAll(".remove-btn").forEach(btn => {
     btn.addEventListener("click", function () {
+
       const index = this.getAttribute("data-index");
       cartItems.splice(index, 1);
       localStorage.setItem("pawlorCartItems", JSON.stringify(cartItems));
