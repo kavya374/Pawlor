@@ -45,61 +45,72 @@
       <h3>Total: $<span id="cart-total">0.00</span></h3>
     </div>
   </div>
-<script>
-  const cartItemsContainer = document.getElementById("cart-items");
-  const cartTotal = document.getElementById("cart-total");
-  const cartCount = document.querySelector(".cart-count");
-
-  let cartItems = JSON.parse(localStorage.getItem("pawlorCartItems")) || [];
-
-  function updateCartCount() {
-    if (cartCount) {
-      const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-      cartCount.textContent = totalCount;
-    }
-  }
-
-  function renderCart() {
-    cartItemsContainer.innerHTML = '';
-    let total = 0;
-
-    cartItems.forEach((item, index) => {
-      total += item.price * item.quantity;
-
-      const cartItemEl = document.createElement("div");
-      cartItemEl.className = "cart-item";
-      cartItemEl.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" width="80">
-        <div class="item-col">
-          <div>
-            <h4>${item.name}</h4>
-            <p>$${item.price.toFixed(2)}</p>
-            <p>Quantity: ${item.quantity}</p>
-          </div>
-          <div>
-            <button class="remove-btn" data-index="${index}">Remove</button>
-          </div>
+</div>
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>pawlor<span class="paw-icon">🐾</span></h2>
+                    </div>
+                    <p>Luxury pet spa products for your furry friend. Natural, vet-approved, and made with love.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Grooming</a></li>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Treats</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Spa Box Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pawlor. All rights reserved.</p>
+                <div class="payment-icons">
+                    <span>We accept:</span>
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visa.svg" alt="Visa" width="32" height="20">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mastercard.svg" alt="Mastercard" width="32" height="20">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paypal.svg" alt="PayPal" width="32" height="20">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/applepay.svg" alt="Apple Pay" width="32" height="20">
+                </div>
+            </div>
         </div>
-      `;
-      cartItemsContainer.appendChild(cartItemEl);
-    });
+    </footer>
 
-    cartTotal.textContent = total.toFixed(2);
-
-    document.querySelectorAll(".remove-btn").forEach(btn => {
-      btn.addEventListener("click", function () {
-        const index = this.getAttribute("data-index");
-        cartItems.splice(index, 1);
-        localStorage.setItem("pawlorCartItems", JSON.stringify(cartItems));
-        renderCart();
-        updateCartCount();
-      });
-    });
-  }
-
-  renderCart();
-  updateCartCount();
-</script>
+<script src="cart.js"></script>
 
 </body>
 </html>
